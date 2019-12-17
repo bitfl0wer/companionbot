@@ -1,0 +1,19 @@
+{
+  "name": "companionbot",
+  "version": "1.0.0",
+  "description": "Companionbot is a Discord Bot that focuses on fun social commands.",
+  "main": "companionbot.js",
+  "scripts": {
+    "test": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gitflee/companionbot.git"
+  },
+  "author": "gitflee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gitflee/companionbot/issues"
+  },
+  "homepage": "https://github.com/gitflee/companionbot#readme"
+}
