@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Companionbot is a Discord Bot that focuses on fun social commands.",
   "main": "companionbot.js",
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "scripts": {
     "test": "node ."
   },
