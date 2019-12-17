@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/gitflee/companionbot/issues"
   },
-  "homepage": "https://github.com/gitflee/companionbot#readme"
+  "homepage": "https://github.com/gitflee/companionbot#readme",
+  "dependencies": {
+    "discord.js": "^11.5.1",
+    "fs": "0.0.1-security"
+  }
 }
