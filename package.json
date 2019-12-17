@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Companionbot is a Discord Bot that focuses on fun social commands.",
   "main": "companionbot.js",
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "scripts": {
     "test": "node ."
   },
@@ -16,9 +15,14 @@
   "bugs": {
     "url": "https://github.com/gitflee/companionbot/issues"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "homepage": "https://github.com/gitflee/companionbot#readme",
   "dependencies": {
+    "better-sqlite3": "^5.4.3",
     "discord.js": "^11.5.1",
+    "enmap": "^5.2.3",
     "fs": "0.0.1-security"
   }
 }
