@@ -1,6 +1,7 @@
 exports.run = (client, message, args) => {
     var sleep = require('system-sleep');
     var rar = require('../randomArrayEntry');
+    const Discord = require('discord.js');
     //IMPORTANT: Userdata Initalization, otherwise crash;
     client.userdatainit;
     //Variable Init
@@ -14,41 +15,74 @@ exports.run = (client, message, args) => {
     let companionUser = client.userdata.get(authorID, "activeCompanion");
     let companionMsgHug = client.companions.get(client.userdata.get(authorID, "activeCompanion"), "msgHug");
     let companionImgHug = client.companions.get(client.userdata.get(authorID, "activeCompanion"), "imgHug");
+    let variant = client.userdata.get(authorID, "variant");
     if (message.mentions.members.first() != undefined) {
         mentionName = message.mentions.members.first().username;
         mentionID = message.mentions.members.first().id; //ID of the first user mentioned
         mentionTag = message.mentions.members.first().user.tag;
-    } 
+    }
     //Required Functions
     function allPings() {
         mentionlist = [];
-        for(count = 0; count <= args.length; count++){
-            if(String(args[count]).startsWith('<@')) {
+        for (count = 0; count <= args.length; count++) {
+            if (String(args[count]).startsWith('<@')) {
                 mentionlist.push(args[count] + ' ');
-             }
+            }
         }
-        if(mentionlist.length > 1) {
-            mentionlist.splice(mentionlist.length - 1, 0, ' and '); 
+        if (mentionlist.length > 1) {
+            mentionlist.splice(mentionlist.length - 1, 0, ' and ');
         }
         strMentionlist = String(mentionlist);
-        strMentionlist = strMentionlist.replace(',',' ');
-        return strMentionlist = strMentionlist.replace(' ,',' ');
+        strMentionlist = strMentionlist.replace(',', ' ');
+        return strMentionlist = strMentionlist.replace(' ,', ' ');
     }
 
     //CODE
 
     switch (message.mentions.members.first()) {
         case undefined: //If no Member is mentioned
-            if(client.userdata.get(authorID, "images") === true) { //If no member is mentioned but the author wants images
-                return message.channel.send(rar.randomArrayEntry(companionMsgHug) + ` *hugs* ${authorPing}`, {file: rar.randomArrayEntry(companionImgHug)});
+            if (client.userdata.get(authorID, "images") === true) { //If no member is mentioned but the author wants images
+                const attachImage = new Discord.Attachment(rar.randomArrayEntry(companionImgHug), 'attachment.jpg');
+                const attachThumb = new Discord.Attachment(`./companions/lux/${variant}.jpg`, 'thumbnail.jpg');
+                const Embed = new Discord.RichEmbed()
+                    .setColor(client.companions.get(companionUser, "color"))
+                    .setTitle(`A hug by ${companionUser}!`)
+                    .attachFiles([attachImage, attachThumb])
+                    .setThumbnail('attachment://thumbnail.jpg')
+                    .setImage('attachment://attachment.jpg')
+                    .addField(rar.randomArrayEntry(companionMsgHug), `*hugs* ${authorPing}`);
+                return message.channel.send(Embed);
             } else { //If no member is mentioned and the author also doesn't want images
-                return message.channel.send(rar.randomArrayEntry(companionMsgHug) + ` *hugs* ${authorPing}`);
+                const attachThumb = new Discord.Attachment(`./companions/lux/${variant}.jpg`, 'thumbnail.jpg');
+                const Embed = new Discord.RichEmbed()
+                    .setColor(client.companions.get(companionUser, "color"))
+                    .setTitle(`A hug by ${companionUser}!`)
+                    .attachFile(attachThumb)
+                    .setThumbnail('attachment://thumbnail.jpg')
+                    .addField(rar.randomArrayEntry(companionMsgHug), `*hugs* ${authorPing}`);
+                return message.channel.send(Embed);
             }
-        default: //If a member is mentioned
-            if(client.userdata.get(authorID, "images") === true) { //If a member is mentioned but the author wants images
-                return message.channel.send(rar.randomArrayEntry(companionMsgHug) + ` *hugs* ${allPings()}`, {file: rar.randomArrayEntry(companionImgHug)});
-            } else { //If a member is mentioned and the author also doesn't want images
-                return message.channel.send(rar.randomArrayEntry(companionMsgHug) + ` *hugs* ${allPings()}`);
-            }
+            default: //If a member is mentioned
+                if (client.userdata.get(authorID, "images") === true) { //If a member is mentioned but the author wants images
+                    const attachImage = new Discord.Attachment(rar.randomArrayEntry(companionImgHug), 'attachment.jpg');
+                    const attachThumb = new Discord.Attachment(`./companions/lux/${variant}.jpg`, 'thumbnail.jpg');
+                    const Embed = new Discord.RichEmbed()
+                        .setColor(client.companions.get(companionUser, "color"))
+                        .setTitle(`A hug by ${companionUser}!`)
+                        .attachFiles([attachImage, attachThumb])
+                        .setThumbnail('attachment://thumbnail.jpg')
+                        .setImage('attachment://attachment.jpg')
+                        .addField(rar.randomArrayEntry(companionMsgHug), `*hugs* ${allPings()}`);
+                    return message.channel.send(Embed);
+                } else { //If a member is mentioned and the author also doesn't want images
+                const attachThumb = new Discord.Attachment(`./companions/lux/${variant}.jpg`, 'thumbnail.jpg');
+                const Embed = new Discord.RichEmbed()
+                    .setColor(client.companions.get(companionUser, "color"))
+                    .setTitle(`A hug by ${companionUser}!`)
+                    .attachFile(attachThumb)
+                    .setThumbnail('attachment://thumbnail.jpg')
+                    .addField(rar.randomArrayEntry(companionMsgHug), `*hugs* ${allPings()}`);
+                return message.channel.send(Embed);
+                }
     }
 }

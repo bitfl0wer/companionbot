@@ -1,5 +1,6 @@
 {
     "msgHug": ["Have a hug!", "Have some hugs!"],
     "imgHug": ["./companions/lux/hug/1.jpg", "./companions/lux/hug/2.jpg"],
-    "rarity": "common"
+    "rarity": "common",
+    "color": "#f5d742"
 }
