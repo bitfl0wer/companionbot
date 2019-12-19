@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/gitflee/companionbot#readme",
   "dependencies": {
+    "better-sqlite-pool": "^0.2.2",
     "better-sqlite3": "^5.4.3",
     "discord.js": "^11.5.1",
     "enmap": "^5.2.3",
