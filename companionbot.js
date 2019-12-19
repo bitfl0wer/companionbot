@@ -14,7 +14,10 @@ let token = JSON.parse(rawtoken);
 // We also need to make sure we're attaching the config to the CLIENT so it's accessible everywhere!
 client.config = config;
 
-client.userdata = new Enmap({name: "userdata"});
+client.userdata = new Enmap({
+  name: "userdata",
+  ensureProps: true
+});
 
 fs.readdir("./events/", (err, files) => {
   if (err) return console.error(err);
@@ -39,15 +42,19 @@ fs.readdir("./commands/", (err, files) => {
   });
 });
 
-client.companions = new Enmap({name: 'companions'});
+client.companions = new Enmap({
+  name: 'companions',
+  ensureProps: true
+});
 
 fs.readdir("./companions/", (err, files) => {
-  if(err) return console.error(err);
+  if (err) return console.error(err);
   files.forEach(file => {
-    if(!file.endsWith(".json")) return;
+    if (!file.endsWith(".json")) return;
     let rawprops = fs.readFileSync(`./companions/${file}`);
     let props = JSON.parse(rawprops);
     let companionName = file.split(".")[0];
+    companionName = companionName.charAt(0).toUpperCase() + companionName.slice(1);
     console.log(`Attempting to load companion ${companionName}`);
     client.companions.set(companionName, props);
     console.log(`Companion successfully loaded: ${companionName}`);

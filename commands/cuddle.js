@@ -14,8 +14,8 @@ exports.run = (client, message, args) => {
     let mentionName;
     let companionUser = client.userdata.get(authorID, "activeCompanion");
     companionUser = companionUser.charAt(0).toUpperCase() + companionUser.slice(1);
-    let companionMsgHug = client.companions.get(client.userdata.get(authorID, "activeCompanion"), "msgHug");
-    let companionImgHug = client.companions.get(client.userdata.get(authorID, "activeCompanion"), "imgHug");
+    let companionMsgcuddle = client.companions.get(client.userdata.get(authorID, "activeCompanion"), "msgCuddle");
+    let companionImgcuddle = client.companions.get(client.userdata.get(authorID, "activeCompanion"), "imgCuddle");
     let variant = client.userdata.get(authorID, "variant");
     if (message.mentions.members.first() != undefined) {
         mentionName = message.mentions.members.first().username;
@@ -43,46 +43,46 @@ exports.run = (client, message, args) => {
     switch (message.mentions.members.first()) {
         case undefined: //If no Member is mentioned
             if (client.userdata.get(authorID, "images") === true) { //If no member is mentioned but the author wants images
-                const attachImage = new Discord.Attachment(rar.randomArrayEntry(companionImgHug), 'attachment.jpg');
+                const attachImage = new Discord.Attachment(rar.randomArrayEntry(companionImgcuddle), 'attachment.jpg');
                 const attachThumb = new Discord.Attachment(`./companions/${companionUser}/${variant}.jpg`, 'thumbnail.jpg');
                 const Embed = new Discord.RichEmbed()
                     .setColor(client.companions.get(companionUser, "color"))
-                    .setTitle(`A hug by ${companionUser}!`)
+                    .setTitle(`A cuddle by ${companionUser}!`)
                     .attachFiles([attachImage, attachThumb])
                     .setThumbnail('attachment://thumbnail.jpg')
                     .setImage('attachment://attachment.jpg')
-                    .addField(rar.randomArrayEntry(companionMsgHug), `*hugs* ${authorPing}`);
+                    .addField(rar.randomArrayEntry(companionMsgcuddle), `*cuddles* ${authorPing}`);
                 return message.channel.send(Embed);
             } else { //If no member is mentioned and the author also doesn't want images
                 const attachThumb = new Discord.Attachment(`./companions/${companionUser}/${variant}.jpg`, 'thumbnail.jpg');
                 const Embed = new Discord.RichEmbed()
                     .setColor(client.companions.get(companionUser, "color"))
-                    .setTitle(`A hug by ${companionUser}!`)
+                    .setTitle(`A cuddle by ${companionUser}!`)
                     .attachFile(attachThumb)
                     .setThumbnail('attachment://thumbnail.jpg')
-                    .addField(rar.randomArrayEntry(companionMsgHug), `*hugs* ${authorPing}`);
+                    .addField(rar.randomArrayEntry(companionMsgcuddle), `*cuddles* ${authorPing}`);
                 return message.channel.send(Embed);
             }
             default: //If a member is mentioned
                 if (client.userdata.get(authorID, "images") === true) { //If a member is mentioned but the author wants images
-                    const attachImage = new Discord.Attachment(rar.randomArrayEntry(companionImgHug), 'attachment.jpg');
+                    const attachImage = new Discord.Attachment(rar.randomArrayEntry(companionImgcuddle), 'attachment.jpg');
                     const attachThumb = new Discord.Attachment(`./companions/${companionUser}/${variant}.jpg`, 'thumbnail.jpg');
                     const Embed = new Discord.RichEmbed()
                         .setColor(client.companions.get(companionUser, "color"))
-                        .setTitle(`A hug by ${companionUser}!`)
+                        .setTitle(`A cuddle by ${companionUser}!`)
                         .attachFiles([attachImage, attachThumb])
                         .setThumbnail('attachment://thumbnail.jpg')
                         .setImage('attachment://attachment.jpg')
-                        .addField(rar.randomArrayEntry(companionMsgHug), `*hugs* ${allPings()}`);
+                        .addField(rar.randomArrayEntry(companionMsgcuddle), `*cuddles* ${allPings()}`);
                     return message.channel.send(Embed);
                 } else { //If a member is mentioned and the author also doesn't want images
                 const attachThumb = new Discord.Attachment(`./companions/${companionUser}/${variant}.jpg`, 'thumbnail.jpg');
                 const Embed = new Discord.RichEmbed()
                     .setColor(client.companions.get(companionUser, "color"))
-                    .setTitle(`A hug by ${companionUser}!`)
+                    .setTitle(`A cuddle by ${companionUser}!`)
                     .attachFile(attachThumb)
                     .setThumbnail('attachment://thumbnail.jpg')
-                    .addField(rar.randomArrayEntry(companionMsgHug), `*hugs* ${allPings()}`);
+                    .addField(rar.randomArrayEntry(companionMsgcuddle), `*cuddles* ${allPings()}`);
                 return message.channel.send(Embed);
                 }
     }

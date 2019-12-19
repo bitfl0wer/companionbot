@@ -1,6 +1,8 @@
 {
-    "msgHug": ["Have a hug!", "Have some hugs!"],
+    "msgHug": ["For love, and all things bright! :heart:", "Lets illuminate your heart :heart:", "I'll take any excuse to hug you! :blush:", "For friendship, love and hugs c:", "Let's shine together! :heart:"],
     "imgHug": ["./companions/lux/hug/1.jpg", "./companions/lux/hug/2.jpg"],
+    "msgCuddle": ["For love, and all things bright! :heart:", "Lets illuminate your heart :heart:", "Ohhh! I'd gladly cuddle you!", "If this means that we're friends, then I'm in! :heart:", "I really love some good cuddles after an exhausting battle!"],
+    "imgCuddle": ["./companions/lux/cuddle/1.jpg", "./companions/lux/cuddle/2.jpg", "./companions/lux/cuddle/3.jpg"],
     "rarity": "common",
     "color": "#f5d742"
 }

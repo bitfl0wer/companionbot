@@ -5,8 +5,8 @@ module.exports = (client, message) => {
     */
   function userdatainit() {
     client.userdata.ensure(`${message.author.id}`, { //Userdata Initalitation
-      companions: ['lux'],
-      activeCompanion: 'lux',
+      companions: ['Lux'],
+      activeCompanion: 'Lux',
       variant: 'vanilla',
       level: 1,
       xp: 0,
