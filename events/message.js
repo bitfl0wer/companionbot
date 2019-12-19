@@ -7,6 +7,7 @@ module.exports = (client, message) => {
     client.userdata.ensure(`${message.author.id}`, { //Userdata Initalitation
       companions: ['lux'],
       activeCompanion: 'lux',
+      variant: 'vanilla',
       level: 1,
       xp: 0,
       images: true

@@ -1,4 +1,5 @@
 {
     "msgHug": ["Have a hug!", "Have some hugs!"],
-    "imgHug": ["./lux/1.jpg,", "./lux/2.jpg"]
+    "imgHug": ["./companions/lux/hug/1.jpg", "./companions/lux/hug/2.jpg"],
+    "rarity": "common"
 }

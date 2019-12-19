@@ -1,4 +1,9 @@
 {
-    "prefix": "+",
-    "chance:": 50
+    "prefix": "%",
+    "chance_spawn": 48,
+    "chance_common": 29,
+    "chance_uncommon": 17,
+    "chance_epic": 5.5,
+    "chance_legendary": 0.4,
+    "chance_mythical": 0.1
 }
