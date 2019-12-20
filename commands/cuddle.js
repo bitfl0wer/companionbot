@@ -61,7 +61,7 @@ exports.run = (client, message, args) => {
             }
             default: //If a member is mentioned
                 if (client.userdata.get(authorID, "images") === true) { //If a member is mentioned but the author wants images
-                    const Embed = ei.embedImage('cuddle');
+                    const Embed = ei.embedImage('cuddle', client, message, args);
                     return message.channel.send(Embed);
                     /*
                     const attachImage = new Discord.Attachment(rar.randomArrayEntry(companionImgcuddle), 'attachment.jpg'.toLowerCase());
