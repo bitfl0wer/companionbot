@@ -66,4 +66,8 @@ client.serverdata = new Enmap({
   ensureProps: true
 });
 
+client.activationcodes = new Enmap({
+  name: 'codes'
+});
+
 client.login(token.token);

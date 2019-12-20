@@ -39,7 +39,9 @@ exports.run = (client, message, args) => {
     }
 
     //CODE
-
+    let companionRarity = client.companions.get(client.userdata.get(authorID, "activeCompanion"), "rarity");
+    companionRarity = companionRarity.charAt(0).toUpperCase() + companionRarity.slice(1);
+    let footer = `${companionUser} - Rarity: ${companionRarity}`;
     switch (message.mentions.members.first()) {
         case undefined: //If no Member is mentioned
             if (client.userdata.get(authorID, "images") === true) { //If no member is mentioned but the author wants images
@@ -51,6 +53,7 @@ exports.run = (client, message, args) => {
                     .attachFiles([attachImage, attachThumb])
                     .setThumbnail('attachment://thumbnail.jpg')
                     .setImage('attachment://attachment.jpg')
+                    .setFooter(footer)
                     .addField(rar.randomArrayEntry(companionMsgHug), `*hugs* ${authorPing}`);
                 return message.channel.send(Embed);
             } else { //If no member is mentioned and the author also doesn't want images
@@ -59,6 +62,7 @@ exports.run = (client, message, args) => {
                     .setColor(client.companions.get(companionUser, "color"))
                     .setTitle(`A hug by ${companionUser}!`)
                     .attachFile(attachThumb)
+                    .setFooter(footer)
                     .setThumbnail('attachment://thumbnail.jpg')
                     .addField(rar.randomArrayEntry(companionMsgHug), `*hugs* ${authorPing}`);
                 return message.channel.send(Embed);
@@ -71,6 +75,7 @@ exports.run = (client, message, args) => {
                         .setColor(client.companions.get(companionUser, "color"))
                         .setTitle(`A hug by ${companionUser}!`)
                         .attachFiles([attachImage, attachThumb])
+                        .setFooter(footer)
                         .setThumbnail('attachment://thumbnail.jpg')
                         .setImage('attachment://attachment.jpg')
                         .addField(rar.randomArrayEntry(companionMsgHug), `*hugs* ${allPings()}`);
@@ -81,6 +86,7 @@ exports.run = (client, message, args) => {
                     .setColor(client.companions.get(companionUser, "color"))
                     .setTitle(`A hug by ${companionUser}!`)
                     .attachFile(attachThumb)
+                    .setFooter(footer)
                     .setThumbnail('attachment://thumbnail.jpg')
                     .addField(rar.randomArrayEntry(companionMsgHug), `*hugs* ${allPings()}`);
                 return message.channel.send(Embed);

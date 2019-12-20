@@ -1,0 +1,83 @@
+{
+  "msgHug": [
+    "Thank you so much.. For everything.",
+    "Iro iro ippai arigatou..."
+  ],
+  "imgHug": [
+    "./companions/mashiro/hug/shiinahug1.jpg",
+    "./companions/mashiro/hug/shiinahug2.jpg"
+  ],
+  "msgCuddle": [
+    "You're warm. And soft. Say nothing.",
+    "Is this the plan B?"
+  ],
+  "imgCuddle": [
+    "./companions/mashiro/cuddle/shiinacuddle1.jpg"
+  ],
+  "msgKiss": [
+    "What happened to me? Is this... love?",
+    "You're a baka... But you are my baka"
+  ],
+  "imgKiss": [
+    "./companions/mashiro/kiss/shiinakiss1.jpg",
+    "./companions/mashiro/kiss/shiinakiss2.jpg"
+  ],
+  "msgPat": [
+    "Ermm, no. I don't do pats. I might make an exception for you in the future. Maybe..."
+  ],
+  "imgPat": [
+    "./companions/mashiro/pat/shiinapat1.jpg"
+  ],
+  "msgPout": [
+    "Hmph. Whatever.",
+    "Plan A it is."
+  ],
+  "imgPout": [
+    "./companions/mashiro/pout/shiinapout1.jpg"
+  ],
+  "msgCry": [
+    "I don't have to stay here, if it makes you hate me :c",
+    "Baka. How could you."
+  ],
+  "imgCry": [
+    "./companions/mashiro/cry/shiinacry1.jpg",
+    "./companions/mashiro/cry/shiinacry2.jpg"
+  ],
+  "msgBlush": [
+    "*says nothing*",
+    "W-what?"
+  ],
+  "imgBlush": [
+    "./companions/mashiro/blush/shiinablush1.jpg",
+    "./companions/mashiro/blush/shiinablush2.jpg"
+  ],
+  "msgCute": [
+    "I am cute 24/7 but still not even close to you.",
+    "Oh my... Look at that face. I would love to draw you."
+  ],
+  "imgCute": [
+    "./companions/mashiro/cute/shiinacute1.jpg",
+    "./companions/mashiro/cute/shiinacute2.jpg"
+  ],
+  "msgBoop": [
+    "Boop, I guess..."
+  ],
+  "imgBoop": [
+    "./companions/mashiro/boop/shiinaboop1.jpg"
+  ],
+  "msgPoke": [
+    "I'd love to poke your cute face O.O"
+  ],
+  "imgPoke": [
+    "./companions/mashiro/poke/shiinapoke1.jpg"
+  ],
+  "msgCheer": [
+    "Cheer? I'm not sure I can do that... But you sure can do anything!",
+    "Don't worry! It's more interesting when the future's uncertain."
+  ],
+  "imgCheer": [
+    "./companions/mashiro/cheer/shiinacheer1.jpg"
+  ],
+  "color": "#80bfff",
+  "rarity": "epic"
+}

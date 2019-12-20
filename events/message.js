@@ -14,8 +14,19 @@ module.exports = (client, message) => {
     });
   }
   client.userdatainit = userdatainit();
+
+  //CODE:  Companion Spawning
+  function generateRandomNumber() {
+    var min = 0.000,
+      max = 100.000,
+      highlightedNumber = Math.random() * (max - min) + min;
+    highlightedNumber = parseFloat(highlightedNumber.toFixed(1));
+    return (highlightedNumber);
+  }
   
-  //CODE
+  let rintspawn = generateRandomNumber();
+
+  //CODE: Command Handling
 
   if (message.guild) {
     if (message.author.bot) return;
@@ -27,10 +38,11 @@ module.exports = (client, message) => {
     const command = args.shift().toLowerCase();
     const cmd = client.commands.get(command);
     if (!cmd) return;
+
     function beTyping(time) { //Function to add "**Lux** is typing..." as a Discord indicator, time in ms
-        message.channel.startTyping();
-        sleep(time);
-        return message.channel.stopTyping();
+      message.channel.startTyping();
+      sleep(time);
+      return message.channel.stopTyping();
     }
     beTyping(200);
     cmd.run(client, message, args);
