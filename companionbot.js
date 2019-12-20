@@ -61,4 +61,9 @@ fs.readdir("./companions/", (err, files) => {
   });
 });
 
+client.serverdata = new Enmap({
+  name: 'serverdata',
+  ensureProps: true
+});
+
 client.login(token.token);
