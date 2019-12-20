@@ -43,8 +43,8 @@ exports.run = (client, message, args) => {
     switch (message.mentions.members.first()) {
         case undefined: //If no Member is mentioned
             if (client.userdata.get(authorID, "images") === true) { //If no member is mentioned but the author wants images
-                const attachImage = new Discord.Attachment(rar.randomArrayEntry(companionImgHug), 'attachment.jpg');
-                const attachThumb = new Discord.Attachment(`./companions/${companionUser}/${variant}.jpg`, 'thumbnail.jpg'.toLowerCase());
+                const attachImage = new Discord.Attachment(rar.randomArrayEntry(companionImgHug), 'attachment.jpg'.toLowerCase());
+                const attachThumb = new Discord.Attachment(`./companions/${companionUser}/${variant}.jpg`.toLowerCase(), 'thumbnail.jpg'.toLowerCase());
                 const Embed = new Discord.RichEmbed()
                     .setColor(client.companions.get(companionUser, "color"))
                     .setTitle(`A hug by ${companionUser}!`)
@@ -54,7 +54,7 @@ exports.run = (client, message, args) => {
                     .addField(rar.randomArrayEntry(companionMsgHug), `*hugs* ${authorPing}`);
                 return message.channel.send(Embed);
             } else { //If no member is mentioned and the author also doesn't want images
-                const attachThumb = new Discord.Attachment(`./companions/${companionUser}/${variant}.jpg`, 'thumbnail.jpg');
+                const attachThumb = new Discord.Attachment(`./companions/${companionUser}/${variant}.jpg`.toLowerCase(), 'thumbnail.jpg'.toLowerCase());
                 const Embed = new Discord.RichEmbed()
                     .setColor(client.companions.get(companionUser, "color"))
                     .setTitle(`A hug by ${companionUser}!`)
@@ -66,7 +66,7 @@ exports.run = (client, message, args) => {
             default: //If a member is mentioned
                 if (client.userdata.get(authorID, "images") === true) { //If a member is mentioned but the author wants images
                     const attachImage = new Discord.Attachment(rar.randomArrayEntry(companionImgHug), 'attachment.jpg'.toLowerCase());
-                    const attachThumb = new Discord.Attachment(`./companions/${companionUser}/${variant}.jpg`, 'thumbnail.jpg'.toLowerCase());
+                    const attachThumb = new Discord.Attachment(`./companions/${companionUser}/${variant}.jpg`.toLowerCase(), 'thumbnail.jpg'.toLowerCase());
                     const Embed = new Discord.RichEmbed()
                         .setColor(client.companions.get(companionUser, "color"))
                         .setTitle(`A hug by ${companionUser}!`)
@@ -76,7 +76,7 @@ exports.run = (client, message, args) => {
                         .addField(rar.randomArrayEntry(companionMsgHug), `*hugs* ${allPings()}`);
                     return message.channel.send(Embed);
                 } else { //If a member is mentioned and the author also doesn't want images
-                const attachThumb = new Discord.Attachment(`./companions/${companionUser}/${variant}.jpg`, 'thumbnail.jpg'.toLowerCase());
+                const attachThumb = new Discord.Attachment(`./companions/${companionUser}/${variant}.jpg`.toLowerCase(), 'thumbnail.jpg'.toLowerCase());
                 const Embed = new Discord.RichEmbed()
                     .setColor(client.companions.get(companionUser, "color"))
                     .setTitle(`A hug by ${companionUser}!`)
