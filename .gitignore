@@ -107,4 +107,4 @@ dist
 config/token.json
 
 #enmap databases
-data/
+#data/
