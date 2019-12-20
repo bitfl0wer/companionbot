@@ -12,3 +12,7 @@ A Demo of this bot can be invited to your Guild with this Link: https://discorda
 }`
 
 Feel free to report issues and suggest new features!
+
+## Co-Authors and notable contributors
+crc32#5099 For letting me host the bot on her VPS 24/7 ❤️
+MrMates#1882 For creating the companion Mashiro 
