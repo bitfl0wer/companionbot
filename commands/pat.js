@@ -18,15 +18,15 @@ exports.run = (client, message, args) => {
     switch (message.mentions.members.first()) { 
         case undefined: //If no member is Mentioned:
             if (client.userdata.get(authorID, "images") === true) { //No mention, WITH images
-                return message.channel.send(eis.embedImageSelf('hug', client, message, args));
+                return message.channel.send(eis.embedImageSelf('pat', client, message, args));
             } else { //No mention, WITHOUT images
-                return message.channel.send(eins.embedNoImageSelf('hug', client, message, args));
+                return message.channel.send(eins.embedNoImageSelf('pat', client, message, args));
             }
             default: //If a member is mentioned
                 if (client.userdata.get(authorID, "images") === true) { //Mention, WITH images
-                    return message.channel.send(ei.embedImage('hug', client, message, args));
+                    return message.channel.send(ei.embedImage('pat', client, message, args));
                 } else { //Mention, WITHOUT images
-                return message.channel.send(ein.embedNoImage('hug', client, message, args));
+                return message.channel.send(ein.embedNoImage('pat', client, message, args));
                 }
     }
 }

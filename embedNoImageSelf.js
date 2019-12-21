@@ -1,4 +1,4 @@
-exports.embedImage = function (action, client, message, args) {
+exports.embedNoImageSelf = function (action, client, message, args) {
     const Discord = require('discord.js');
     const fs = require('fs');
     var rar = require('./randomArrayEntry');
@@ -7,13 +7,6 @@ exports.embedImage = function (action, client, message, args) {
     let authorPing = '<@' + authorID + '>'; //Pings the Command invoker
     let companionUser = client.userdata.get(authorID, "activeCompanion");
     companionUser = companionUser.charAt(0).toUpperCase() + companionUser.slice(1);
-    let companionImgAction;
-    if(client.companions.has(companionUser,`img${cAction}`)) {
-        companionImgAction = client.companions.get(client.userdata.get(authorID, "activeCompanion"), `img${cAction}`);
-        companionImgAction = rar.randomArrayEntry(companionImgAction);
-    } else {
-        companionImgAction = './placeholder.png';
-    }
     let companionMsgAction;
     if(client.companions.has(companionUser, `msg${cAction}`)) {
         companionMsgAction = client.companions.get(client.userdata.get(authorID, "activeCompanion"), `msg${cAction}`);
@@ -25,20 +18,6 @@ exports.embedImage = function (action, client, message, args) {
     companionRarity = companionRarity.charAt(0).toUpperCase() + companionRarity.slice(1);
     let footer = `${companionUser} - Rarity: ${companionRarity}`;
 
-    function allPings() {
-        mentionlist = [];
-        for (count = 0; count <= args.length; count++) {
-            if (String(args[count]).startsWith('<@')) {
-                mentionlist.push(args[count] + ' ');
-            }
-        }
-        if (mentionlist.length > 1) {
-            mentionlist.splice(mentionlist.length - 1, 0, ' and ');
-        }
-        strMentionlist = String(mentionlist);
-        strMentionlist = strMentionlist.replace(',', ' ');
-        return strMentionlist = strMentionlist.replace(' ,', ' ');
-    }
     action = String(action).toLowerCase();
     let eMessage;
     let eMessage2;
@@ -88,15 +67,13 @@ exports.embedImage = function (action, client, message, args) {
             eMessage2 = `*pouts*`;
             break;
     }
-    const attachImage = new Discord.Attachment(companionImgAction, 'attachment.jpg'.toLowerCase());
     const attachThumb = new Discord.Attachment(`./companions/${companionUser}/${variant}.jpg`.toLowerCase(), 'thumbnail.jpg'.toLowerCase());
     const Embed = new Discord.RichEmbed()
         .setColor(client.companions.get(companionUser, "color"))
         .setTitle(`${eMessage}`)
-        .attachFiles([attachImage, attachThumb])
+        .attachFile(attachThumb)
         .setThumbnail('attachment://thumbnail.jpg')
         .setFooter(footer)
-        .setImage('attachment://attachment.jpg')
-        .addField(rar.randomArrayEntry(companionMsgAction), `${eMessage2} ${allPings()}`);
+        .addField(rar.randomArrayEntry(companionMsgAction), `${eMessage2} ${authorPing}`);
     return Embed;
 };

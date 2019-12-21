@@ -1,4 +1,4 @@
-exports.embedImage = function (action, client, message, args) {
+exports.embedImageSelf = function (action, client, message, args) {
     const Discord = require('discord.js');
     const fs = require('fs');
     var rar = require('./randomArrayEntry');
@@ -18,27 +18,13 @@ exports.embedImage = function (action, client, message, args) {
     if(client.companions.has(companionUser, `msg${cAction}`)) {
         companionMsgAction = client.companions.get(client.userdata.get(authorID, "activeCompanion"), `msg${cAction}`);
     } else {
-        return `:frowning: Sorry, but the companion ${companionUser} doesn't have messages for this action yet. You can fix this, by contributing messages here: https://github.com/gitflee/companionbot/tree/master/companions :heart: `;
+        return `:frowning: Sorry, but the companion ${companionUser} doesn't have messages for this action yet. You can fix this, by contributing messages here: https://github.com/gitflee/companionbot/tree/master/companions :heart:`;
     }
     let variant = client.userdata.get(authorID, "variant");
     let companionRarity = client.companions.get(client.userdata.get(authorID, "activeCompanion"), "rarity");
     companionRarity = companionRarity.charAt(0).toUpperCase() + companionRarity.slice(1);
     let footer = `${companionUser} - Rarity: ${companionRarity}`;
 
-    function allPings() {
-        mentionlist = [];
-        for (count = 0; count <= args.length; count++) {
-            if (String(args[count]).startsWith('<@')) {
-                mentionlist.push(args[count] + ' ');
-            }
-        }
-        if (mentionlist.length > 1) {
-            mentionlist.splice(mentionlist.length - 1, 0, ' and ');
-        }
-        strMentionlist = String(mentionlist);
-        strMentionlist = strMentionlist.replace(',', ' ');
-        return strMentionlist = strMentionlist.replace(' ,', ' ');
-    }
     action = String(action).toLowerCase();
     let eMessage;
     let eMessage2;
@@ -97,6 +83,6 @@ exports.embedImage = function (action, client, message, args) {
         .setThumbnail('attachment://thumbnail.jpg')
         .setFooter(footer)
         .setImage('attachment://attachment.jpg')
-        .addField(rar.randomArrayEntry(companionMsgAction), `${eMessage2} ${allPings()}`);
+        .addField(rar.randomArrayEntry(companionMsgAction), `${eMessage2} ${authorPing}`);
     return Embed;
 };
