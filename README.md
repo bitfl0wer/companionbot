@@ -76,7 +76,8 @@ My goal is to make this bot as good as I can. I do not have that many set goals,
 <h2>Acknowledgements</h2>
 This Project could not have been possible without some VERY helpful people. I will list all of them here!
 <h4>Special thanks to:</h4>
-- [crc32](https://github.com/crc-32 "crc32"). She created the CompanionMaker and lets me use her VPS to host the bot. She is amazing, helpful, and without her, this would genuinely not have been possible.
+- Crc32. She created the CompanionMaker and lets me use her VPS to host the bot. She is amazing, helpful, and without her, this would genuinely not have been possible.
+
 - Northy: Northy stood up for me and tried to put my bot on a popular Discord Server. Thanks bud <3
 
 <h4>Companion Contributions:</h4>
