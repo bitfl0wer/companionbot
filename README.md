@@ -37,6 +37,7 @@ An open-source Discord Bot written in Node.js that aims to make social commands 
 You can either use the Invite link to invite the official bot to your server, or host your own version (with own Databases etc.)!
 
 <h3>Prerequisites<h3>
+	
 - Node.JS v10.x
 - npm
 
