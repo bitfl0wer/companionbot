@@ -16,7 +16,7 @@
   </p>
 </p>
 
-##Table of Contents
+<h2>Table of Contents</h2>
 
 * [About the Project](#about-the-project)
 * [Getting Started](#getting-started)
@@ -30,17 +30,17 @@
 
 
 
-##About the Project
+<h2>About the Project</h2>
 An open-source Discord Bot written in Node.js that aims to make social commands much more unique!
 
-##Getting Started
+<h2>Getting Started</h2>
 You can either use the Invite link to invite the official bot to your server, or host your own version (with own Databases etc.)!
 
-###Prerequisites
+<h3>Prerequisites<h3>
 - Node.JS v10.x
 - npm
 
-###Install
+<h3>Install</h3>
 With NPM, install:
 	- fs
 	- better-sqlite3
@@ -59,24 +59,24 @@ Format it like this:
     }
 
 Type `node .` into a Terminal, and the bot should start up!
-###What does it do?
+<h2>What does it do?</h2>
 I'm glad you ask!
 The CompanionBot is - like many others - a bot that focuses on fun social commands, such as hugs, pats, kisses, etc.
 The key difference to other bots is, that you can **collect and switch between different companions** (essentially waifus), which will execute those commands for you. 
-##Contribute
+<h2>Contribute</h2>
 Everyone can contribute by adding their own companion with its own images and Quotes, by using [this handy Form](https://companion.crc32.dev/# "this handy Form"), and sending the resulting .zip file to me on Discord (Flori#7676) or (what i'd rather like) making a GitHub Pull-Request.
-##Roadmap
+<h2>Roadmap</h2>
 My goal is to make this bot as good as I can. I do not have that many set goals, but if you happen to have any ideas: Please create an issue and flag it as "new"! :)
 
-##Contact
+<h2>Contact</h2>
 - Discord: **Flori#7676** [online like 24/7]
 - E-Mail: trashflee@gmail.com [not checked that often]
 
-##Acknowledgements
+<h2>Acknowledgements</h2>
 This Project could not have been possible without some VERY helpful people. I will list all of them here!
-####Special thanks to:
+<h4>Special thanks to:</h4>
 - [crc32](https://github.com/crc-32 "crc32"). She created the CompanionMaker and lets me use her VPS to host the bot. She is amazing, helpful, and without her, this would genuinely not have been possible.
 - Northy: Northy stood up for me and tried to put my bot on a popular Discord Server. Thanks bud <3
 
-####Companion Contributions:
+<h4>Companion Contributions:</h4>
 - MrMates#1882: Mashiro
