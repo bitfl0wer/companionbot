@@ -15,7 +15,7 @@
     <a href="https://github.com/gitflee/companionbot/issues">Request Feature</a>
   </p>
 </p>
-## Table of Contents
+##Table of Contents
 
 * [About the Project](#about-the-project)
 * [Getting Started](#getting-started)
