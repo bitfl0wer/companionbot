@@ -1,0 +1,54 @@
+{
+    "msgBlush": [
+        "AAAAAA >~<"
+    ],
+    "msgBoop": [
+        "lemme just... hehe >:3",
+        "your nose looks squishy! ha",
+        "whats that on your face? HA! c:<"
+    ],
+    "msgCheer": [
+        "yaaaaaaaaay! :DDDD"
+    ],
+    "msgCry": [
+        ";~; meanie",
+        "Aaaaaaa you bulli"
+    ],
+    "msgCuddle": [
+        "omg cuddles are the best!!!"
+    ],
+    "msgCute": [
+        "u r cute, don't deny it >:c"
+    ],
+    "msgHug": [
+        "I love hugs! Yey",
+        "Cmere you!"
+    ],
+    "msgKiss": [
+        "but... avery... UGHHHH FINEEEEE"
+    ],
+    "msgPat": [
+        "*patpat* c:"
+    ],
+    "msgPoke": [
+        "eh? you there? ><"
+    ],
+    "msgPout": [
+        "*sniff* :c"
+    ],
+    "imgHug": "./companions/alice/hug/0.jpg",
+    "imgCuddle": [
+        "./companions/alice/cuddle/0.jpg"
+      ],
+    "imgKiss": "./companions/alice/kiss/0.jpg",
+    "imgPat": "./companions/alice/pat/0.jpg",
+    "imgPout": "./companions/alice/pout/0.jpg",
+    "imgCry": "./companions/alice/cry/0.jpg",
+    "imgBlush": "./companions/alice/blush/0.jpg",
+    "imgCute": "./companions/alice/cute/0.jpg",
+    "imgBoop": "./companions/alice/boop/0.jpg",
+    "imgPoke": "./companions/alice/poke/0.jpg",
+    "imgCheer": "./companions/alice/cheer/0.jpg",
+    "rarity": "legendary",
+    "color": "#1effaa"
+}

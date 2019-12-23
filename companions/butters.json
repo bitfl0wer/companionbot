@@ -1,0 +1,48 @@
+{
+    "color": "#00fff5",
+    "msgBlush": [
+        "Wow, you really mean it?"
+    ],
+    "msgBoop": [
+        "Hehe, boop!"
+    ],
+    "msgCheer": [
+        "Yipee!"
+    ],
+    "msgCry": [
+        "Aw hamburgers..."
+    ],
+    "msgCuddle": [
+        "Here you go, pal! "
+    ],
+    "msgCute": [
+        "You're looking great!"
+    ],
+    "msgHug": [
+        "Alrighty! "
+    ],
+    "msgKiss": [
+        "You're a real special guy!"
+    ],
+    "msgPat": [
+        "There you go!"
+    ],
+    "msgPoke": [
+        "Ohh, it's all squishy."
+    ],
+    "msgPout": [
+        "Hmpf, you're being real silly mister!"
+    ],
+    "imgHug": ["./companions/butters/hug/0.jpg"],
+    "imgCuddle": ["./companions/butters/cuddle/0.jpg"],
+    "imgKiss": ["./companions/butters/kiss/0.jpg"],
+    "imgPat": ["./companions/butters/pat/0.jpg"],
+    "imgPout": ["./companions/butters/pout/0.jpg"],
+    "imgCry": ["./companions/butters/cry/0.jpg"],
+    "imgBlush": ["./companions/butters/blush/0.jpg"],
+    "imgCute": ["./companions/butters/cute/0.jpg"],
+    "imgBoop": ["./companions/butters/boop/0.jpg"],
+    "imgPoke": ["./companions/butters/poke/0.jpg"],
+    "imgCheer": ["./companions/butters/cheer/0.jpg"],
+    "rarity": "rare"
+}

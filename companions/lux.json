@@ -1,8 +1,94 @@
 {
-    "msgHug": ["For love, and all things bright! :heart:", "Lets illuminate your heart :heart:", "I'll take any excuse to hug you! :blush:", "For friendship, love and hugs c:", "Let's shine together! :heart:"],
-    "imgHug": ["./companions/lux/hug/1.jpg", "./companions/lux/hug/2.jpg"],
-    "msgCuddle": ["For love, and all things bright! :heart:", "Lets illuminate your heart :heart:", "Ohhh! I'd gladly cuddle you!", "If this means that we're friends, then I'm in! :heart:", "I really love some good cuddles after an exhausting battle!"],
-    "imgCuddle": ["./companions/lux/cuddle/1.jpg", "./companions/lux/cuddle/2.jpg", "./companions/lux/cuddle/3.jpg"],
+    "msgBlush": [
+        "Ahhh!",
+        "You really light up my day, you know? :heart:"
+    ],
+    "msgBoop": [
+        "What's that on your face? ITS YOUR NOSE? GOTCHA >:D"
+    ],
+    "msgCheer": [
+        "You can do this!",
+        "Stay positive!"
+    ],
+    "msgCry": [
+        "I believe in you, not just Demacia.",
+        "I'll still try to stay positive..."
+    ],
+    "msgCuddle": [
+        "For love, and all things bright! :heart:",
+        "Lets illuminate your heart :heart:",
+        "Ohhh! I'd gladly cuddle you!",
+        "If this means that we're friends, then I'm in! :heart:",
+        "I really love some good cuddles after an exhausting battle!"
+    ],
+    "msgCute": [
+        "I like the way your eyes light up when you see me! :blush:",
+        "I'm so proud to have you."
+    ],
+    "msgHug": [
+        "For love, and all things bright! :heart:",
+        "Lets illuminate your heart :heart:",
+        "I'll take any excuse to hug you! :blush:",
+        "For friendship, love and hugs c:",
+        "Let's shine together! :heart:",
+        "Home is where the spark is. And you :heart:"
+    ],
+    "msgKiss": [
+        "I-I hope noone is looking...",
+        "As long as Garen doesn't tell anyone..."
+    ],
+    "msgPat": [
+        "You have such soft hair! I like it c:"
+    ],
+    "msgPoke": [
+        "You up? It's time to fight!!"
+    ],
+    "msgPout": [
+        "We should try being friends first, no?",
+        "Hello, person-who-irrationally-wants-to-kill-me! It's so good to meet you!",
+        "You don't like me? Well, I'd rather talk to a statue.",
+        "Hey, who are you calling a lady?"
+    ],
+    "imgHug": [
+        "./companions/lux/hug/0.jpg",
+        "./companions/lux/hug/1.jpg",
+        "./companions/lux/hug/2.jpg"
+    ],
+    "imgCuddle": [
+        "./companions/lux/cuddle/0.jpg",
+        "./companions/lux/cuddle/1.jpg",
+        "./companions/lux/cuddle/2.jpg",
+        "./companions/lux/cuddle/3.jpg"
+    ],
+    "imgKiss": [
+        "./companions/lux/kiss/0.jpg",
+        "./companions/lux/kiss/1.jpg"
+    ],
+    "imgPat": [
+        "./companions/lux/pat/0.jpg"
+    ],
+    "imgPout": [
+        "./companions/lux/pout/0.jpg"
+    ],
+    "imgCry": [
+        "./companions/lux/cry/0.jpg"
+    ],
+    "imgBlush": [
+        "./companions/lux/blush/0.jpg"
+    ],
+    "imgCute": [
+        "./companions/lux/cute/0.jpg",
+        "./companions/lux/cute/1.jpg"
+    ],
+    "imgBoop": [
+        "./companions/lux/boop/0.jpg"
+    ],
+    "imgPoke": [
+        "./companions/lux/poke/0.jpg"
+    ],
+    "imgCheer": [
+        "./companions/lux/cheer/0.jpg"
+    ],
     "rarity": "common",
-    "color": "#f5d742"
+    "color": "#ffe993"
 }

@@ -26,6 +26,8 @@ module.exports = (client, message) => {
   
   let rintspawn = generateRandomNumber();
 
+  
+
   //CODE: Command Handling
 
   if (message.guild) {
