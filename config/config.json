@@ -1,10 +1,11 @@
 {
     "prefix": "%",
-    "chance_spawn": 50,
-    "common": 48,
-    "uncommon": 29,
-    "rare": 17,
-    "epic": 5.5,
+    "owner": "261192665247252480",
+    "chance_spawn": 30,
+    "common": 55,
+    "uncommon": 27,
+    "rare": 13,
+    "epic": 4.5,
     "legendary": 0.4,
     "mythical": 0.1
 }

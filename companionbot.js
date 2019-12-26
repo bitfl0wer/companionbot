@@ -1,3 +1,14 @@
+/***
+ *       _____ ____        _   
+ *      / ____|  _ \      | |  
+ *     | |    | |_) | ___ | |_ 
+ *     | |    |  _ < / _ \| __|
+ *     | |____| |_) | (_) | |_ 
+ *      \_____|____/ \___/ \__|
+ *                             
+ *                             
+ */
+
 const Discord = require("discord.js");
 const Enmap = require("enmap");
 const fs = require("fs");
@@ -14,7 +25,6 @@ let token = JSON.parse(rawtoken);
 client.randomspawn = true;
 // We also need to make sure we're attaching the config to the CLIENT so it's accessible everywhere!
 client.config = config;
-
 client.userdata = new Enmap({
   name: "userdata",
   ensureProps: true
@@ -37,9 +47,8 @@ fs.readdir("./commands/", (err, files) => {
     if (!file.endsWith(".js")) return;
     let props = require(`./commands/${file}`);
     let commandName = file.split(".")[0];
-    console.log(`Attempting to load command ${commandName}`);
     client.commands.set(commandName, props);
-    console.log(`Command successfully loaded: ${commandName}`);
+    console.log(`Command loaded: ${commandName}`);
   });
 });
 
@@ -56,9 +65,8 @@ fs.readdir("./companions/", (err, files) => {
     let props = JSON.parse(rawprops);
     let companionName = file.split(".")[0];
     companionName = companionName.charAt(0).toUpperCase() + companionName.slice(1);
-    console.log(`Attempting to load companion ${companionName}`);
     client.companions.set(companionName, props);
-    console.log(`Companion successfully loaded: ${companionName}`);
+    console.log(`Companion loaded: ${companionName}`);
   });
 });
 
@@ -71,4 +79,7 @@ client.activationcodes = new Enmap({
   name: 'codes'
 });
 
+client.cooldown = new Enmap({
+  name: 'cooldown'
+});
 client.login(token.token);
