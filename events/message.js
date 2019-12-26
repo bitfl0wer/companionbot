@@ -67,7 +67,7 @@ module.exports = (client, message) => {
             client.cooldown.set('cooldown', true);
             setTimeout(() => {
               client.cooldown.set('cooldown', false);
-            }, 12); //120000
+            }, 120000); //120000
           }
           //client.channels.get(`${client.serverdata.get(message.guild.id, 'spawnchannel')}`).send();
         }
