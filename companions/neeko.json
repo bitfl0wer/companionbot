@@ -1,0 +1,89 @@
+{
+    "msgBlush": [
+        "Poof! Neeko all red now... I like!"
+    ],
+    "msgBoop": [
+        "I am being me and doing... me things. Not suspicious. *boop*",
+        "Dee dee dee... Just minding my own business not booping you!"
+    ],
+    "msgCheer": [
+        "Woo! Powerful! Like jungle cat Nidalee. I miss her. :(",
+        "We are to fight now? Lets go!"
+    ],
+    "msgCry": [
+        "Do not be a sad tomato.",
+        "Feel bad! I didn't mean it!"
+    ],
+    "msgCuddle": [
+        "No more room for problems please. Only room for more cheesebreads!!",
+        "Sharing memories, colors, feelings is magic! Magic connects people.",
+        "Wish I could stay like this forever."
+    ],
+    "msgCute": [
+        "Neeko think you pretty!",
+        "Neeko joyful to see you! :blush:"
+    ],
+    "msgHug": [
+        "Co-'om Se-Henna? Oh, it means like, um... We smile forever. Friends! That's the word! Friends!",
+        "The spirits are all around me. Warm, like hugs.",
+        "Wish I could stay like this forever."
+    ],
+    "msgKiss": [
+        "You taste like many emotions. Excitement, love, joy and... sweet? Is sweet a feeling?",
+        "Now we are bonded... Thank you!",
+        "Fa Hasici! It means I like you. In a good way."
+    ],
+    "msgPat": [
+        "Sho'ma is like... Um... The shape of someone's spirit, who they really are inside. Neeko like your Sho'ma :blush:",
+        "After fight, can Neeko feel your human head fur?"
+    ],
+    "msgPoke": [
+        "I'm sorry! That wasn't me! ...evil Tail"
+    ],
+    "msgPout": [
+        "I want to become everybody! Who says I cannot? I will prove them wrong! Then, I will become them. Last laugh? Neeko!",
+        "Neeko is not a sad tomato. She is a strong tomato!",
+        "Who stands in Neeko's way? Dummies with small Sho'ma that's who!",
+        "No, tail! We must be angry now.",
+        "No more mister nice Neeko.",
+        "No! Be nice and sweet like Nidalee!"
+    ],
+    "imgHug": [
+        "./companions/neeko/hug/0.jpg",
+        "./companions/neeko/hug/1.jpg",
+        "./companions/neeko/hug/2.jpg"
+    ],
+    "imgCuddle": [
+        "./companions/neeko/cuddle/0.jpg",
+        "./companions/neeko/cuddle/1.jpg"
+    ],
+    "imgKiss": [
+        "./companions/neeko/kiss/0.jpg"
+    ],
+    "imgPat": [
+        "./companions/neeko/pat/0.jpg"
+    ],
+    "imgPout": [
+        "./companions/neeko/pout/0.jpg"
+    ],
+    "imgCry": [
+        "./companions/neeko/cry/0.jpg"
+    ],
+    "imgBlush": [
+        "./companions/neeko/blush/0.jpg"
+    ],
+    "imgCute": [
+        "./companions/neeko/cute/0.jpg"
+    ],
+    "imgBoop": [
+        "./companions/neeko/boop/0.jpg"
+    ],
+    "imgPoke": [
+        "./companions/neeko/poke/0.jpg"
+    ],
+    "imgCheer": [
+        "./companions/neeko/cheer/0.jpg",
+        "./companions/neeko/cheer/1.jpg"
+    ],
+	"rarity": "legendary"
+}

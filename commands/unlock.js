@@ -1,5 +1,6 @@
 exports.run = (client, message, args) => {
-    let ownerid = '261192665247252480';
+    //%unlock add key companion
+    let ownerid = client.config.owner;
     let authorID = message.author.id; //ID of the Command invoker
     client.userdata.evict(authorID);
     let companionarr = client.userdata.get(authorID, 'companions');
