@@ -36,6 +36,9 @@ module.exports = (client, message) => {
 
   let rintspawn = generateRandomNumber();
   let cooldown;
+  if (message.content.indexOf(client.config.prefix) === 0) {
+    rintspawn = 200;
+  }
 
   switch (client.serverdata.get(message.guild.id, 'spawnmethod')) {
     case 1:
