@@ -79,5 +79,6 @@
     "imgCheer": [
         "./companions/Natsuki /cheer/0.jpg",
         "./companions/Natsuki /cheer/1.jpg"
-    ]
+    ],
+    "rarity": "uncommon"
 }
