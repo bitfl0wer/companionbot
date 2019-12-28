@@ -37,48 +37,48 @@
         "Hmph! Baka! "
     ],
     "imgHug": [
-        "./companions/Natsuki /hug/0.jpg",
-        "./companions/Natsuki /hug/1.jpg",
-        "./companions/Natsuki /hug/2.jpg"
+        "./companions/natsuki/hug/0.jpg",
+        "./companions/natsuki/hug/1.jpg",
+        "./companions/natsuki/hug/2.jpg"
     ],
     "imgCuddle": [
-        "./companions/Natsuki /cuddle/0.jpg",
-        "./companions/Natsuki /cuddle/1.jpg"
+        "./companions/natsuki/cuddle/0.jpg",
+        "./companions/natsuki/cuddle/1.jpg"
     ],
     "imgKiss": [
-        "./companions/Natsuki /kiss/0.jpg",
-        "./companions/Natsuki /kiss/1.jpg"
+        "./companions/natsuki/kiss/0.jpg",
+        "./companions/natsuki/kiss/1.jpg"
     ],
     "imgPat": [
-        "./companions/Natsuki /pat/0.jpg",
-        "./companions/Natsuki /pat/1.jpg",
-        "./companions/Natsuki /pat/2.jpg"
+        "./companions/natsuki/pat/0.jpg",
+        "./companions/natsuki/pat/1.jpg",
+        "./companions/natsuki/pat/2.jpg"
     ],
     "imgPout": [
-        "./companions/Natsuki /pout/0.jpg",
-        "./companions/Natsuki /pout/1.jpg"
+        "./companions/natsuki/pout/0.jpg",
+        "./companions/natsuki/pout/1.jpg"
     ],
     "imgCry": [
-        "./companions/Natsuki /cry/0.jpg",
-        "./companions/Natsuki /cry/1.jpg"
+        "./companions/natsuki/cry/0.jpg",
+        "./companions/natsuki/cry/1.jpg"
     ],
     "imgBlush": [
-        "./companions/Natsuki /blush/0.jpg",
-        "./companions/Natsuki /blush/1.jpg"
+        "./companions/natsuki/blush/0.jpg",
+        "./companions/natsuki/blush/1.jpg"
     ],
     "imgCute": [
-        "./companions/Natsuki /cute/0.jpg",
-        "./companions/Natsuki /cute/1.jpg"
+        "./companions/natsuki/cute/0.jpg",
+        "./companions/natsuki/cute/1.jpg"
     ],
     "imgBoop": [
-        "./companions/Natsuki /boop/0.jpg"
+        "./companions/natsuki/boop/0.jpg"
     ],
     "imgPoke": [
-        "./companions/Natsuki /poke/0.jpg"
+        "./companions/natsuki/poke/0.jpg"
     ],
     "imgCheer": [
-        "./companions/Natsuki /cheer/0.jpg",
-        "./companions/Natsuki /cheer/1.jpg"
+        "./companions/natsuki/cheer/0.jpg",
+        "./companions/natsuki/cheer/1.jpg"
     ],
     "rarity": "uncommon"
 }
