@@ -1,0 +1,83 @@
+{
+    "color": "#ff93c8",
+    "msgBlush": [
+        "E-eh?! H-hey! Hmph..."
+    ],
+    "msgBoop": [
+        "Ehehe~ "
+    ],
+    "msgCheer": [
+        "Hey.. Dont be sad.. I'm here for you ^-^"
+    ],
+    "msgCry": [
+        "*sobs* you meanie..!"
+    ],
+    "msgCuddle": [
+        "E-eh?! Fine.... But don't get used to it!",
+        "You want to what?! I mean... I guess i can make you an exception..."
+    ],
+    "msgCute": [
+        "Ehehe~! You're so cute! "
+    ],
+    "msgHug": [
+        "W-wha-?! You want a hug?! I mean... Sure I guess....",
+        "*regretting life choices*",
+        "Ugh. Fine. "
+    ],
+    "msgKiss": [
+        ">//////< You're mine, Baka!"
+    ],
+    "msgPat": [
+        "You're too tall for me to reach your head baka! Imma just- *stands on tip-toes* There we go!"
+    ],
+    "msgPoke": [
+        "Heyheyheyheyheyheyhey. "
+    ],
+    "msgPout": [
+        "Hmph! Baka! "
+    ],
+    "imgHug": [
+        "./companions/Natsuki /hug/0.jpg",
+        "./companions/Natsuki /hug/1.jpg",
+        "./companions/Natsuki /hug/2.jpg"
+    ],
+    "imgCuddle": [
+        "./companions/Natsuki /cuddle/0.jpg",
+        "./companions/Natsuki /cuddle/1.jpg"
+    ],
+    "imgKiss": [
+        "./companions/Natsuki /kiss/0.jpg",
+        "./companions/Natsuki /kiss/1.jpg"
+    ],
+    "imgPat": [
+        "./companions/Natsuki /pat/0.jpg",
+        "./companions/Natsuki /pat/1.jpg",
+        "./companions/Natsuki /pat/2.jpg"
+    ],
+    "imgPout": [
+        "./companions/Natsuki /pout/0.jpg",
+        "./companions/Natsuki /pout/1.jpg"
+    ],
+    "imgCry": [
+        "./companions/Natsuki /cry/0.jpg",
+        "./companions/Natsuki /cry/1.jpg"
+    ],
+    "imgBlush": [
+        "./companions/Natsuki /blush/0.jpg",
+        "./companions/Natsuki /blush/1.jpg"
+    ],
+    "imgCute": [
+        "./companions/Natsuki /cute/0.jpg",
+        "./companions/Natsuki /cute/1.jpg"
+    ],
+    "imgBoop": [
+        "./companions/Natsuki /boop/0.jpg"
+    ],
+    "imgPoke": [
+        "./companions/Natsuki /poke/0.jpg"
+    ],
+    "imgCheer": [
+        "./companions/Natsuki /cheer/0.jpg",
+        "./companions/Natsuki /cheer/1.jpg"
+    ]
+}
