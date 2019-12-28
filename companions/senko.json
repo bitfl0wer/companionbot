@@ -1,8 +1,74 @@
 {
-    "msgHug": ["Just relax and let yourself be pampered, okay? :blush:"],
-    "imgHug": ["./companions/senko/hug/1.jpg"],
-    "msgCuddle": ["Just relax and let yourself be pampered, okay? :blush:"],
-    "imgCuddle": ["./companions/senko/cuddle/1.jpg"],
-    "rarity": "uncommon",
-    "color": "#F3AB38"
+    "color": "#ffb800",
+    "msgBlush": [
+        "Uya!",
+        "Wh-Wha!? Don't tease me like that!"
+    ],
+    "msgBoop": [
+        "Take This! Boop Uya!"
+    ],
+    "msgCheer": [
+        "Uyaa! Truly Great!"
+    ],
+    "msgCry": [
+        "*smol sob*\r\n",
+        "W-Why would you say something like that?"
+    ],
+    "msgCuddle": [
+        "Shh. Let me Pamper you!~"
+    ],
+    "msgCute": [
+        "Aren't you just the cutest. Uya!~"
+    ],
+    "msgHug": [
+        "Pamper Time!"
+    ],
+    "msgKiss": [
+        "K-Kiss?! I-I suppose."
+    ],
+    "msgPat": [
+        "Hehe. Your head is so soft."
+    ],
+    "msgPoke": [
+        "Hey You. Yeah you. Pay attention."
+    ],
+    "msgPout": [
+        "Meanie! *pout*"
+    ],
+    "imgHug": [
+        "./companions/senko/hug/0.jpg",
+        "./companions/senko/hug/1.jpg"
+    ],
+    "imgCuddle": [
+        "./companions/senko/cuddle/0.jpg"
+    ],
+    "imgKiss": [
+        "./companions/senko/kiss/0.jpg"
+    ],
+    "imgPat": [
+        "./companions/senko/pat/0.jpg"
+    ],
+    "imgPout": [
+        "./companions/senko/pout/0.jpg",
+        "./companions/senko/pout/1.jpg"
+    ],
+    "imgCry": [
+        "./companions/senko/cry/0.jpg"
+    ],
+    "imgBlush": [
+        "./companions/senko/blush/0.jpg"
+    ],
+    "imgCute": [
+        "./companions/senko/cute/0.jpg"
+    ],
+    "imgBoop": [
+        "./companions/senko/boop/0.jpg"
+    ],
+    "imgPoke": [
+        "./companions/senko/poke/0.jpg"
+    ],
+    "imgCheer": [
+        "./companions/senko/cheer/0.jpg"
+    ],
+    "rarity": "uncommon" 
 }
