@@ -1,4 +1,5 @@
 module.exports = (client, message) => {
+  const randomFloat = require('random-float');
   var sleep = require('system-sleep');
   var rar = require('../randomArrayEntry');
   var gc = require('../getCompanion');
@@ -29,17 +30,14 @@ module.exports = (client, message) => {
   //CODE:  Companion Spawning
   //Note to self: DO NOT USE RETURN, OTHERWISE COMMANDS WILL NOT WORK (except in functions)
   function generateRandomNumber() {
-    var min = 0.000,
-      max = 100.000,
-      highlightedNumber = Math.random() * (max - min) + min;
-    highlightedNumber = parseFloat(highlightedNumber.toFixed(1));
+    for (let co = 0; co <= 100000; co++) {
+      highlightedNumber = randomFloat(0, 100);
+    }
+    highlightedNumber = parseFloat(highlightedNumber.toFixed(1))
     return (highlightedNumber);
   }
   if (message.author.bot) return;
   let rintspawn = generateRandomNumber();
-  while (rintspawn == 0) {
-    rintspawn = generateRandomNumber();
-  }
   if (message.content.indexOf(client.config.prefix) === 0) {
     rintspawn = 200;
   }
@@ -52,6 +50,7 @@ module.exports = (client, message) => {
             let spawnedcompanion;
             let spawnedrarity;
             let srarity;
+
             if (rintspawn > 0 && rintspawn < client.config.common) {
               spawnedcompanion = gc.getCompanion('common', client);
               spawnedrarity = 'A common';

@@ -2,13 +2,10 @@ exports.run = (client, message, args) => {
     //Fix: You can Collect infinite of the same companion
     let authorID = message.author.id;
     arg = String(args[0]).toLowerCase();
-    console.log('Arg: ' + arg);
     scomp = String(client.serverdata.get(message.guild.id, 'scompanion')).toLowerCase();
-    console.log('Scomp: ' + scomp);
     let ucomps = Array.from(client.userdata.get(authorID, 'companions'));
     let argButCapital = arg.charAt(0).toUpperCase() + arg.slice(1);
     let hasComp = ucomps.includes(argButCapital);
-    console.log('has? ' + hasComp);
     if (scomp === 'none') {
         return message.channel.send(":exclamation: This server either doesn't use the Collect-Spawnsystem, the spawnchannel has not been set up right, or there are no uncollected companions. ||Tell an Admin to set a spawnchannel with `%settings setchannel`, if they haven't already!||");
     } else if (scomp === 'collected') {
