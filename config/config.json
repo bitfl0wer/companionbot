@@ -1,7 +1,7 @@
 {
     "prefix": "%",
     "owner": "261192665247252480",
-    "chance_spawn": 100,
+    "chance_spawn": 40,
     "common": 51,
     "uncommon": 29,
     "rare": 13.5,
