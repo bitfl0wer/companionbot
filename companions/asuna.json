@@ -1,0 +1,89 @@
+{
+    "color": "#E3AE82",
+    "msgBlush": [
+        "D-Did you really mean that? Thanks... idiot...",
+        "Ahh! You can't say that here! The Knights of the Blood might hear us!"
+    ],
+    "msgBoop": [
+        "And that's why I'M leading the Knights of the Blood! :blush:"
+    ],
+    "msgCheer": [
+        "Yay!"
+    ],
+    "msgCry": [
+        "YOU ALMOST DIED! ",
+        "YOU HAVE TO BE MORE CAREFUL! ;-;"
+    ],
+    "msgCuddle": [
+        "Sometimes, the things that are most important are right in front of you! :blush:",
+        "What? Even Knights of the Blood need someone to cuddle with from time to time! Now shut up."
+    ],
+    "msgCute": [
+        "You're an idiot, but an adorable one.",
+        "You are without a doubt the cutest person in SAO."
+    ],
+    "msgHug": [
+        "I don't even want to think about what I would do if you died.",
+        "Sometimes, the things that are most important are right in front of you."
+    ],
+    "msgKiss": [
+        "If we ever go back to the real world I will find you and fall in love with you all over again. :heart:"
+    ],
+    "msgPat": [
+        "You did well.",
+        "How can an idiot like you have such soft hair? Not that I like it or anything..."
+    ],
+    "msgPoke": [
+        "What are you doing? Everyone in the Assault Team is working their butts off to clean the dungeon, and where do I find you? Out here, taking a nap. "
+    ],
+    "msgPout": [
+        "What an idiot.",
+        "You're stupid and I don't want to talk to you right now!"
+    ],
+    "imgHug": [
+        "./companions/asuna/hug/0.gif",
+        "./companions/asuna/hug/1.jpg"
+    ],
+    "imgCuddle": [
+        "./companions/asuna/cuddle/0.gif"
+    ],
+    "imgKiss": [
+        "./companions/asuna/kiss/0.gif",
+        "./companions/asuna/kiss/1.jpg",
+        "./companions/asuna/kiss/2.jpg",
+        "./companions/asuna/kiss/3.jpg",
+        "./companions/asuna/kiss/4.jpg"
+    ],
+    "imgPat": [
+        "./companions/asuna/pat/0.jpg",
+        "./companions/asuna/pat/1.jpg"
+    ],
+    "imgPout": [
+        "./companions/asuna/pout/0.jpg",
+        "./companions/asuna/pout/1.jpg",
+        "./companions/asuna/pout/2.jpg"
+    ],
+    "imgCry": [
+        "./companions/asuna/cry/0.gif",
+        "./companions/asuna/cry/1.gif"
+    ],
+    "imgBlush": [
+        "./companions/asuna/blush/0.gif",
+        "./companions/asuna/blush/1.jpg",
+        "./companions/asuna/blush/2.jpg"
+    ],
+    "imgCute": [
+        "./companions/asuna/cute/0.gif",
+        "./companions/asuna/cute/1.gif"
+    ],
+    "imgBoop": [
+        "./companions/asuna/boop/0.gif"
+    ],
+    "imgPoke": [
+        "./companions/asuna/poke/0.gif"
+    ],
+    "imgCheer": [
+        "./companions/asuna/cheer/0.gif"
+    ],
+    "rarity": "epic"
+}
