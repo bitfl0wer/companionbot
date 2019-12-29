@@ -65,7 +65,8 @@
         "./companions/neeko/pat/0.jpg"
     ],
     "imgPout": [
-        "./companions/neeko/pout/0.jpg"
+        "./companions/neeko/pout/0.jpg",
+        "./companions/neeko/pout/1.jpg"
     ],
     "imgCry": [
         "./companions/neeko/cry/0.jpg"
