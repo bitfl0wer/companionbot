@@ -3,9 +3,10 @@ exports.getCompanion = function (rarity, client) {
     let ran;
     let promise = false;
     while (promise === false) {
-        if(nocompanion === 10000) {
+        if(nocompanion === 20000) {
             ran = 'Senko'; //THIS IS A TEMPORARY FIX
             promise = true;
+            console.log('[SPAWNER]: Senko selected by default.');
             return ran;
         }
         ran = client.companions.randomKey(1);
