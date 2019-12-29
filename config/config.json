@@ -13,5 +13,6 @@
     "color_rare": "#3044db",
     "color_epic": "#9500ff",
     "color_legendary": "#ffe100",
-    "color_mythical": "#ff4400"
+    "color_mythical": "#ff4400",
+    "version": "b1.0.1"
 }
