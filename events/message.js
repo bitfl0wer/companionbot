@@ -2,6 +2,7 @@ module.exports = (client, message) => {
   var sleep = require('system-sleep');
   var rar = require('../randomArrayEntry');
   var gc = require('../getCompanion');
+  var es = require('../embedSpawn');
   /*Example for working with Companions:
     client.companions.get("lux", "msgHug");
     */
@@ -21,7 +22,8 @@ module.exports = (client, message) => {
     spawnmethod: 1,
     channelblacklist: [],
     premium: false,
-    scompanion: 'none'
+    scompanion: 'none',
+    cooldown: false
   })
 
   //CODE:  Companion Spawning
@@ -33,44 +35,59 @@ module.exports = (client, message) => {
     highlightedNumber = parseFloat(highlightedNumber.toFixed(1));
     return (highlightedNumber);
   }
-
+  if (message.author.bot) return;
   let rintspawn = generateRandomNumber();
-  let cooldown;
+  while (rintspawn == 0) {
+    rintspawn = generateRandomNumber();
+  }
   if (message.content.indexOf(client.config.prefix) === 0) {
     rintspawn = 200;
   }
-
   switch (client.serverdata.get(message.guild.id, 'spawnmethod')) {
     case 1:
       if (rintspawn <= client.config.chance_spawn) {
         if (message.author.bot) return;
         if (client.serverdata.get(message.guild.id, 'spawnchannel') !== 0) {
-          if (client.cooldown.get('cooldown') !== true) {
+          if (client.serverdata.get(message.guild.id, 'cooldown') !== true) {
             let spawnedcompanion;
-            if (rintspawn <= client.config.common) {
+            let spawnedrarity;
+            let srarity;
+            if (rintspawn > 0 && rintspawn < client.config.common) {
               spawnedcompanion = gc.getCompanion('common', client);
+              spawnedrarity = 'A common';
+              srarity = "common";
             }
-            if (rintspawn <= client.config.uncommon) {
+            if (rintspawn > client.config.common && rintspawn < client.config.common + client.config.uncommon) {
               spawnedcompanion = gc.getCompanion('uncommon', client);
+              spawnedrarity = 'An uncommon';
+              srarity = "uncommon";
             }
-            if (rintspawn <= client.config.rare) {
+            if (rintspawn > client.config.uncommon + client.config.common && rintspawn < client.config.common + client.config.uncommon + client.config.rare) {
               spawnedcompanion = gc.getCompanion('rare', client);
+              spawnedrarity = 'A rare';
+              srarity = "rare";
             }
-            if (rintspawn <= client.config.epic) {
+            if (rintspawn > client.config.uncommon + client.config.common + client.config.rare && rintspawn < client.config.common + client.config.uncommon + client.config.rare + client.config.epic) {
               spawnedcompanion = gc.getCompanion('epic', client);
+              spawnedrarity = '**An epic**';
+              srarity = "epic";
             }
-            if (rintspawn <= client.config.legendary) {
+            if (rintspawn > client.config.uncommon + client.config.common + client.config.rare + client.config.epic && rintspawn < client.config.common + client.config.uncommon + client.config.rare + client.config.epic + client.config.legendary) {
               spawnedcompanion = gc.getCompanion('legendary', client);
+              spawnedrarity = '***A legendary***';
+              srarity = "legendary";
             }
-            if (rintspawn <= client.config.mythical) {
+            if (rintspawn > client.config.uncommon + client.config.common + client.config.rare + client.config.epic + client.config.legendary && rintspawn < client.config.common + client.config.uncommon + client.config.rare + client.config.epic + client.config.legendary + client.config.mythical) {
               spawnedcompanion = gc.getCompanion('mythical', client);
+              spawnedrarity = '***__A MYTHICAL__***';
+              srarity = "mythical";
             }
             client.serverdata.set(message.guild.id, spawnedcompanion, 'scompanion');
-            client.channels.get(`${client.serverdata.get(message.guild.id, 'spawnchannel')}`).send(`:bell: ${spawnedcompanion} has been spawned! Collect the companion with %collect ${spawnedcompanion}`);
-            client.cooldown.set('cooldown', true);
+            client.channels.get(`${client.serverdata.get(message.guild.id, 'spawnchannel')}`).send(es.embedSpawn(srarity, String(spawnedcompanion).toLowerCase(), client, message, spawnedrarity));
+            client.serverdata.set(message.guild.id, true, 'cooldown');
             setTimeout(() => {
-              client.cooldown.set('cooldown', false);
-            }, 60000); //60000
+              client.serverdata.set(message.guild.id, false, 'cooldown');
+            }, 45000); //60000
           }
           //client.channels.get(`${client.serverdata.get(message.guild.id, 'spawnchannel')}`).send();
         }

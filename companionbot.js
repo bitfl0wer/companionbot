@@ -79,7 +79,10 @@ client.activationcodes = new Enmap({
   name: 'codes'
 });
 
-client.cooldown = new Enmap({
-  name: 'cooldown'
-});
+let serverArr = Array.from(client.serverdata.keys());
+for(let i = 0; i < client.serverdata.count; i++) {
+  console.log(serverArr[i]);
+  client.serverdata.set(serverArr[i], false, 'cooldown')
+}
+console.log(serverArr);
 client.login(token.token);

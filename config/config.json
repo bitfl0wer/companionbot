@@ -2,10 +2,16 @@
     "prefix": "%",
     "owner": "261192665247252480",
     "chance_spawn": 100,
-    "common": 55,
-    "uncommon": 27,
-    "rare": 13,
-    "epic": 4.5,
-    "legendary": 0.4,
-    "mythical": 0.1
+    "common": 51,
+    "uncommon": 29,
+    "rare": 13.5,
+    "epic": 5.9,
+    "legendary": 0.5,
+    "mythical": 0.1,
+    "color_common": "#96fcff",
+    "color_uncommon": "#70baff",
+    "color_rare": "#3044db",
+    "color_epic": "#9500ff",
+    "color_legendary": "#ffe100",
+    "color_mythical": "#ff4400"
 }
