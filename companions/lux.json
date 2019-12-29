@@ -89,6 +89,6 @@
     "imgCheer": [
         "./companions/lux/cheer/0.jpg"
     ],
-    "rarity": "common",
+    "rarity": "default",
     "color": "#ffe993"
 }
