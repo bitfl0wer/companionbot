@@ -88,7 +88,7 @@ exports.embedImage = function (action, client, message, args) {
             eMessage2 = `*pouts*`;
             break;
     }
-    const attachImage = new Discord.Attachment(companionImgAction, 'attachment.jpg'.toLowerCase());
+    const attachImage = new Discord.Attachment(companionImgAction, 'attachment.gif'.toLowerCase());
     const attachThumb = new Discord.Attachment(`./companions/${companionUser}/${variant}.jpg`.toLowerCase(), 'thumbnail.jpg'.toLowerCase());
     const Embed = new Discord.RichEmbed()
         .setColor(client.companions.get(companionUser, "color"))
@@ -96,7 +96,7 @@ exports.embedImage = function (action, client, message, args) {
         .attachFiles([attachImage, attachThumb])
         .setThumbnail('attachment://thumbnail.jpg')
         .setFooter(footer)
-        .setImage('attachment://attachment.jpg')
+        .setImage('attachment://attachment.gif')
         .addField(rar.randomArrayEntry(companionMsgAction), `${eMessage2} ${allPings()}`);
     return Embed;
 };
