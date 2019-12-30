@@ -56,29 +56,24 @@ module.exports = (client, message) => {
               spawnedrarity = 'A common';
               srarity = "common";
             }
-            if (rintspawn > client.config.common && rintspawn < client.config.common + client.config.uncommon) {
-              spawnedcompanion = gc.getCompanion('uncommon', client);
-              spawnedrarity = 'An uncommon';
-              srarity = "uncommon";
-            }
-            if (rintspawn > client.config.uncommon + client.config.common && rintspawn < client.config.common + client.config.uncommon + client.config.rare) {
+            if (rintspawn > client.config.common && rintspawn < client.config.common + client.config.rare) {
               spawnedcompanion = gc.getCompanion('rare', client);
               spawnedrarity = 'A rare';
               srarity = "rare";
             }
-            if (rintspawn > client.config.uncommon + client.config.common + client.config.rare && rintspawn < client.config.common + client.config.uncommon + client.config.rare + client.config.epic) {
+            if (rintspawn > client.config.rare + client.config.common && rintspawn < client.config.common + client.config.rare + client.config.epic) {
               spawnedcompanion = gc.getCompanion('epic', client);
-              spawnedrarity = '**An epic**';
+              spawnedrarity = 'An *epic*';
               srarity = "epic";
             }
-            if (rintspawn > client.config.uncommon + client.config.common + client.config.rare + client.config.epic && rintspawn < client.config.common + client.config.uncommon + client.config.rare + client.config.epic + client.config.legendary) {
+            if (rintspawn > client.config.rare + client.config.common + client.config.epic && rintspawn < client.config.common + client.config.rare + client.config.epic + client.config.legendary) {
               spawnedcompanion = gc.getCompanion('legendary', client);
-              spawnedrarity = '***A legendary***';
+              spawnedrarity = '**A legendary**';
               srarity = "legendary";
             }
-            if (rintspawn > client.config.uncommon + client.config.common + client.config.rare + client.config.epic + client.config.legendary && rintspawn < client.config.common + client.config.uncommon + client.config.rare + client.config.epic + client.config.legendary + client.config.mythical) {
+            if (rintspawn > client.config.rare + client.config.common + client.config.epic + client.config.legendary && rintspawn < client.config.common + client.config.rare + client.config.epic + client.config.legendary + client.config.mythical) {
               spawnedcompanion = gc.getCompanion('mythical', client);
-              spawnedrarity = '***__A MYTHICAL__***';
+              spawnedrarity = '***__A mythical__***';
               srarity = "mythical";
             }
             client.serverdata.set(message.guild.id, spawnedcompanion, 'scompanion');

@@ -6,9 +6,6 @@ exports.embedSpawn = function (rarity, companion, client, message, mrarity) {
         case 'common':
             color = client.config.color_common;
             break;
-        case 'uncommon':
-            color = client.config.color_uncommon;
-            break;
         case 'rare':
             color = client.config.color_rare;
             break;
