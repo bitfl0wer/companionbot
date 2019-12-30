@@ -1,13 +1,13 @@
 exports.run = (client, message, args) => {
     var sleep = require('system-sleep');
-    var rar = require('../randomArrayEntry');
+    var rar = require('../../randomArrayEntry');
     const Discord = require('discord.js');
-    var ei = require('../embedImage');
-    var eis = require('../embedImageSelf');
-    var eins = require('../embedNoImageSelf');
-    var ein = require('../embedNoImage');
-    var eie = require('../embedImageEveryone');
-    var eine = require('../embedNoImageEveryone');
+    var ei = require('../../embedImage');
+    var eis = require('../../embedImageSelf');
+    var eins = require('../../embedNoImageSelf');
+    var ein = require('../../embedNoImage');
+    var eie = require('../../embedImageEveryone');
+    var eine = require('../../embedNoImageEveryone');
     //IMPORTANT: Userdata Initalization, otherwise crash;
     client.userdatainit;
     //Variable Init

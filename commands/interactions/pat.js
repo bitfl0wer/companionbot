@@ -1,13 +1,13 @@
 exports.run = (client, message, args) => {
     var sleep = require('system-sleep');
-    var rar = require('../randomArrayEntry');
+    var rar = require('../../randomArrayEntry');
     const Discord = require('discord.js');
-    var ei = require('../embedImage');
-    var eis = require('../embedImageSelf');
-    var eins = require('../embedNoImageSelf');
-    var ein = require('../embedNoImage');
-    var eie = require('../embedImageEveryone');
-    var eine = require('../embedNoImageEveryone');
+    var ei = require('../../embedImage');
+    var eis = require('../../embedImageSelf');
+    var eins = require('../../embedNoImageSelf');
+    var ein = require('../../embedNoImage');
+    var eie = require('../../embedImageEveryone');
+    var eine = require('../../embedNoImageEveryone');
     //IMPORTANT: Userdata Initalization, otherwise crash;
     client.userdatainit;
     //Variable Init
@@ -22,22 +22,22 @@ exports.run = (client, message, args) => {
             if(args[0] != undefined) {
                 if(String(args[0]).toLowerCase() === 'everyone') {
                     if (client.userdata.get(authorID, "images") === true) { 
-                        return message.channel.send(eie.embedImageEveryone('poke', client, message, args));
+                        return message.channel.send(eie.embedImageEveryone('pat', client, message, args));
                     } else {
-                        return message.channel.send(eine.embedNoImageEveryone('poke', client, message, args));
+                        return message.channel.send(eine.embedNoImageEveryone('pat', client, message, args));
                     }
                 }
             }
             if (client.userdata.get(authorID, "images") === true) { //No mention, WITH images
-                return message.channel.send(eis.embedImageSelf('poke', client, message, args));
+                return message.channel.send(eis.embedImageSelf('pat', client, message, args));
             } else { //No mention, WITHOUT images
-                return message.channel.send(eins.embedNoImageSelf('poke', client, message, args));
+                return message.channel.send(eins.embedNoImageSelf('pat', client, message, args));
             }
             default: //If a member is mentioned
                 if (client.userdata.get(authorID, "images") === true) { //Mention, WITH images
-                    return message.channel.send(ei.embedImage('poke', client, message, args));
+                    return message.channel.send(ei.embedImage('pat', client, message, args));
                 } else { //Mention, WITHOUT images
-                return message.channel.send(ein.embedNoImage('poke', client, message, args));
+                return message.channel.send(ein.embedNoImage('pat', client, message, args));
                 }
     }
 }

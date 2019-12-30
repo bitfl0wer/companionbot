@@ -14,7 +14,9 @@ module.exports = (client, message) => {
       variant: 'vanilla',
       level: 1,
       xp: 0,
-      images: true
+      images: true,
+      cooldown: false,
+      scompanion: '0'
     });
   }
   client.userdatainit = userdatainit();
@@ -26,7 +28,11 @@ module.exports = (client, message) => {
     scompanion: 'none',
     cooldown: false
   })
-
+  client.userdata.evict(message.author.id);
+  client.userdatainit;
+  if(!client.userdata.hasProp(message.author.id, 'cooldown')) {
+    client.userdata.set(message.author.id, false, 'cooldown');
+  }
   //CODE:  Companion Spawning
   //Note to self: DO NOT USE RETURN, OTHERWISE COMMANDS WILL NOT WORK (except in functions)
   function generateRandomNumber() {
@@ -95,7 +101,6 @@ module.exports = (client, message) => {
   if (message.guild) {
     if (message.author.bot) return;
     let idAuthor = String(message.author.id)
-    client.userdatainit;
 
     if (message.content.indexOf(client.config.prefix) !== 0) return;
     const args = message.content.slice(client.config.prefix.length).trim().split(/ +/g);

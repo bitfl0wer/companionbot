@@ -1,13 +1,13 @@
 exports.run = (client, message, args) => {
     var sleep = require('system-sleep');
-    var rar = require('../randomArrayEntry');
+    var rar = require('../../randomArrayEntry');
     const Discord = require('discord.js');
-    var ei = require('../embedImage');
-    var eis = require('../embedImageSelf');
-    var eins = require('../embedNoImageSelf');
-    var ein = require('../embedNoImage');
-    var eie = require('../embedImageEveryone');
-    var eine = require('../embedNoImageEveryone');
+    var ei = require('../../embedImage');
+    var eis = require('../../embedImageSelf');
+    var eins = require('../../embedNoImageSelf');
+    var ein = require('../../embedNoImage');
+    var eie = require('../../embedImageEveryone');
+    var eine = require('../../embedNoImageEveryone');
     //IMPORTANT: Userdata Initalization, otherwise crash;
     client.userdatainit;
     //Variable Init
@@ -19,25 +19,25 @@ exports.run = (client, message, args) => {
     client.userdata.evict(authorID);
     switch (message.mentions.members.first()) { 
         case undefined: //If no member is Mentioned:
-            if(args[0] != undefined) {
+            if(args[1] != undefined) {
                 if(String(args[0]).toLowerCase() === 'everyone') {
                     if (client.userdata.get(authorID, "images") === true) { 
-                        return message.channel.send(eie.embedImageEveryone('kiss', client, message, args));
+                        return message.channel.send(eie.embedImageEveryone('blush', client, message, args));
                     } else {
-                        return message.channel.send(eine.embedNoImageEveryone('kiss', client, message, args));
+                        return message.channel.send(eine.embedNoImageEveryone('blush', client, message, args));
                     }
                 }
             }
             if (client.userdata.get(authorID, "images") === true) { //No mention, WITH images
-                return message.channel.send(eis.embedImageSelf('kiss', client, message, args));
+                return message.channel.send(eis.embedImageSelf('blush', client, message, args));
             } else { //No mention, WITHOUT images
-                return message.channel.send(eins.embedNoImageSelf('kiss', client, message, args));
+                return message.channel.send(eins.embedNoImageSelf('blush', client, message, args));
             }
             default: //If a member is mentioned
                 if (client.userdata.get(authorID, "images") === true) { //Mention, WITH images
-                    return message.channel.send(ei.embedImage('kiss', client, message, args));
+                    return message.channel.send(ei.embedImage('blush', client, message, args));
                 } else { //Mention, WITHOUT images
-                return message.channel.send(ein.embedNoImage('kiss', client, message, args));
+                return message.channel.send(ein.embedNoImage('blush', client, message, args));
                 }
     }
 }

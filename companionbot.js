@@ -52,6 +52,17 @@ fs.readdir("./commands/", (err, files) => {
   });
 });
 
+fs.readdir("./commands/interactions/", (err, files) => {
+  if (err) return console.error(err);
+  files.forEach(file => {
+    if (!file.endsWith(".js")) return;
+    let props = require(`./commands/interactions/${file}`);
+    let commandName = file.split(".")[0];
+    client.commands.set(commandName, props);
+    console.log(`Interaction loaded: ${commandName}`);
+  });
+});
+
 client.companions = new Enmap({
   name: 'companions',
   ensureProps: true
@@ -82,5 +93,9 @@ client.activationcodes = new Enmap({
 let serverArr = Array.from(client.serverdata.keys());
 for(let i = 0; i < client.serverdata.count; i++) {
   client.serverdata.set(serverArr[i], false, 'cooldown')
+}
+let userArr = Array.from(client.userdata.keys());
+for(let i = 0; i < client.userdata.count; i++) {
+  client.userdata.set(userArr[i], false, 'cooldown')
 }
 client.login(token.token);
